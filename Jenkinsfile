@@ -22,4 +22,16 @@ pipeline {
             }
         }
     }
+
+     post {
+        success {
+            echo "✅ Success! The build finished perfectly. Nice job!"
+        }
+        failure {
+            echo "❌ Oh no! The build failed. Check the console logs to see what went wrong."
+        }
+        always {
+            echo "Build process finished."
+        }
+    }
 }
